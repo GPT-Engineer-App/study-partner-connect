@@ -31,13 +31,13 @@ const Search = () => {
             placeholder="Search by study fields or user names"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full mb-2"
+            className="w-full mb-2 bg-orange-100"
           />
-          <Button onClick={handleSearch} className="w-full">Search</Button>
+          <Button onClick={handleSearch} className="w-full bg-orange-500 text-white">Search</Button>
         </div>
         <div className="mb-4">
           <Select value={sortOption} onValueChange={setSortOption}>
-            <SelectTrigger className="w-full">
+            <SelectTrigger className="w-full bg-orange-100">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
@@ -49,14 +49,14 @@ const Search = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {results.map((result) => (
-            <Card key={result.id}>
+            <Card key={result.id} className="bg-orange-100">
               <CardHeader>
                 <img src={result.thumbnail} alt={result.name} className="w-full h-32 object-cover" />
-                <CardTitle>{result.name}</CardTitle>
+                <CardTitle className="text-orange-600">{result.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>{result.tagline}</p>
-                <Button className="mt-2 w-full">View Details</Button>
+                <p className="text-orange-500">{result.tagline}</p>
+                <Button className="mt-2 w-full bg-orange-500 text-white">View Details</Button>
               </CardContent>
             </Card>
           ))}
