@@ -15,9 +15,9 @@ const Search = () => {
     // Implement search logic here
     // For now, we'll use dummy data
     const dummyResults = [
-      { id: 1, name: "John Doe", tagline: "Math Enthusiast", thumbnail: "/path/to/thumbnail1.jpg" },
-      { id: 2, name: "Jane Smith", tagline: "Science Buff", thumbnail: "/path/to/thumbnail2.jpg" },
-      { id: 3, name: "Sam Wilson", tagline: "History Lover", thumbnail: "/path/to/thumbnail3.jpg" },
+      { id: 1, name: "Virtual Buddy", tagline: "Study from anywhere", thumbnail: "/path/to/virtual-buddy.jpg" },
+      { id: 2, name: "Library Buddy", tagline: "Quiet and focused", thumbnail: "/path/to/library-buddy.jpg" },
+      { id: 3, name: "Coffeeshop Buddy", tagline: "Casual and relaxed", thumbnail: "/path/to/coffeeshop-buddy.jpg" },
     ];
     setResults(dummyResults);
   };
