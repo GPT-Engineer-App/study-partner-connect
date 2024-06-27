@@ -23,7 +23,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-yellow-50">
       <Header />
       <main className="flex-grow p-4">
         <div className="mb-4">
@@ -31,13 +31,13 @@ const Search = () => {
             placeholder="Search by study fields or user names"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full mb-2 bg-orange-100"
+            className="w-full mb-2 bg-orange-100 rounded-full"
           />
-          <Button onClick={handleSearch} className="w-full">Search</Button>
+          <Button onClick={handleSearch} className="w-full bg-orange-500 text-white rounded-full px-6 py-2">Search</Button>
         </div>
         <div className="mb-4">
           <Select value={sortOption} onValueChange={setSortOption}>
-            <SelectTrigger className="w-full bg-orange-100">
+            <SelectTrigger className="w-full bg-orange-100 rounded-full">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
@@ -49,14 +49,14 @@ const Search = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {results.map((result) => (
-            <Card key={result.id} className="bg-orange-100">
-              <CardHeader>
-                <img src={result.thumbnail} alt={result.name} className="w-full h-32 object-cover" />
+            <Card key={result.id} className="bg-orange-100 rounded-3xl shadow-lg">
+              <CardHeader className="text-center">
+                <img src={result.thumbnail} alt={result.name} className="w-full h-32 object-cover rounded-t-3xl" />
                 <CardTitle className="text-orange-600">{result.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-orange-500">{result.tagline}</p>
-                <Button className="mt-2 w-full">View Details</Button>
+                <Button className="mt-2 w-full bg-orange-500 text-white rounded-full px-6 py-2">View Details</Button>
               </CardContent>
             </Card>
           ))}

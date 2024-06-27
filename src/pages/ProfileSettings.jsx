@@ -64,11 +64,11 @@ const ProfileSettings = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-yellow-50">
       <main className="flex-grow flex flex-col items-center justify-center p-4">
-        <Card className="w-full max-w-md bg-orange-100">
-          <CardHeader>
-            <CardTitle className="text-center text-2xl text-orange-600">Profile Settings</CardTitle>
+        <Card className="w-full max-w-md bg-orange-100 rounded-3xl shadow-lg">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl text-orange-600">Profile Settings</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
             <form onSubmit={handleSubmit} className="w-full space-y-4">
@@ -79,7 +79,7 @@ const ProfileSettings = () => {
                   name="profilePicture"
                   value={profile.profilePicture}
                   onChange={handleChange}
-                  className="w-full bg-orange-100"
+                  className="w-full bg-orange-100 rounded-full"
                 />
               </div>
               <div>
@@ -89,7 +89,7 @@ const ProfileSettings = () => {
                   name="name"
                   value={profile.name}
                   onChange={handleChange}
-                  className="w-full bg-orange-100"
+                  className="w-full bg-orange-100 rounded-full"
                 />
               </div>
               <div>
@@ -99,7 +99,7 @@ const ProfileSettings = () => {
                   name="bio"
                   value={profile.bio}
                   onChange={handleChange}
-                  className="w-full bg-orange-100"
+                  className="w-full bg-orange-100 rounded-3xl"
                 />
               </div>
               <div>
@@ -109,7 +109,7 @@ const ProfileSettings = () => {
                   name="studyInterests"
                   value={profile.studyInterests}
                   onChange={handleChange}
-                  className="w-full bg-orange-100"
+                  className="w-full bg-orange-100 rounded-full"
                 />
               </div>
               <div>
@@ -119,10 +119,10 @@ const ProfileSettings = () => {
                   name="preferredStudyTimes"
                   value={profile.preferredStudyTimes}
                   onChange={handleChange}
-                  className="w-full bg-orange-100"
+                  className="w-full bg-orange-100 rounded-full"
                 />
               </div>
-              <Button type="submit" className="w-full">Save</Button>
+              <Button type="submit" className="w-full bg-orange-500 text-white rounded-full px-6 py-2">Save</Button>
             </form>
           </CardContent>
         </Card>
