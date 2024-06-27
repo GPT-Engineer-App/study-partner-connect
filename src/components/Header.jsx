@@ -9,7 +9,7 @@ export const Header = () => {
   const { session, logout } = useSupabaseAuth();
 
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white">
+    <header className="flex items-center justify-between p-4 bg-orange-100 text-orange-600 rounded-b-3xl shadow-lg">
       <div className="flex items-center">
         <img src="/logo.png" alt="App Logo" className="h-8 mr-2" />
         <span className="text-xl font-bold">StudyBuddy</span>
@@ -28,7 +28,7 @@ export const Header = () => {
         )}
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="ml-4 p-2 rounded-full bg-gray-700 hover:bg-gray-600"
+          className="ml-4 p-2 rounded-full bg-orange-200 hover:bg-orange-300"
         >
           {theme === "dark" ? <Sun className="h-5 w-5 text-yellow-500" /> : <Moon className="h-5 w-5 text-gray-300" />}
         </button>
