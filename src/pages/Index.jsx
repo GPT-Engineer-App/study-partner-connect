@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -16,7 +16,7 @@ const Index = () => {
           </CardHeader>
           <CardContent className="flex flex-col items-center">
             <p className="text-center mb-4 text-orange-500">Find your perfect study partner today!</p>
-            <Button className="mb-4 bg-orange-500 text-white">Start Searching</Button>
+            <Button className="mb-4">Start Searching</Button>
             <div className="w-full">
               <h2 className="text-lg mb-2 text-orange-600">Recently Viewed Profiles</h2>
               <ul className="space-y-2">

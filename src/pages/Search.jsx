@@ -33,7 +33,7 @@ const Search = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full mb-2 bg-orange-100"
           />
-          <Button onClick={handleSearch} className="w-full bg-orange-500 text-white">Search</Button>
+          <Button onClick={handleSearch} className="w-full">Search</Button>
         </div>
         <div className="mb-4">
           <Select value={sortOption} onValueChange={setSortOption}>
@@ -56,7 +56,7 @@ const Search = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-orange-500">{result.tagline}</p>
-                <Button className="mt-2 w-full bg-orange-500 text-white">View Details</Button>
+                <Button className="mt-2 w-full">View Details</Button>
               </CardContent>
             </Card>
           ))}
