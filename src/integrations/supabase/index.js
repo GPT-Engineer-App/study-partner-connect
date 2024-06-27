@@ -19,54 +19,64 @@ const fromSupabase = async (query) => {
 
 /* supabase integration types
 
-### event
+### profiles
 
-| name       | type        | format | required |
-|------------|-------------|--------|----------|
-| id         | int8        | number | true     |
-| name       | text        | string | true     |
-| created_at | timestamptz | string | true     |
-| date       | date        | string | true     |
+| name                          | type        | format | required |
+|-------------------------------|-------------|--------|----------|
+| id                            | uuid        | string | true     |
+| created_at                    | timestamptz | string | true     |
+| updated_at                    | timestamptz | string | true     |
+| name                          | text        | string | true     |
+| age                           | int4        | number | false    |
+| location                      | text        | string | false    |
+| occupation                    | text        | string | false    |
+| bio                           | text        | string | false    |
+| lookingFor                    | text        | string | false    |
+| rules                         | jsonb       | object | false    |
+| profilePicture                | text        | string | false    |
+| studyInterests                | text        | string | false    |
+| preferredStudyTimes           | text        | string | false    |
 
 */
 
-export const useEvents = () => useQuery({
-    queryKey: ['events'],
-    queryFn: () => fromSupabase(supabase.from('event').select('*')),
+// Hooks for profiles table
+
+export const useProfiles = () => useQuery({
+    queryKey: ['profiles'],
+    queryFn: () => fromSupabase(supabase.from('profiles').select('*')),
 });
 
-export const useEvent = (id) => useQuery({
-    queryKey: ['event', id],
-    queryFn: () => fromSupabase(supabase.from('event').select('*').eq('id', id).single()),
+export const useProfile = (id) => useQuery({
+    queryKey: ['profiles', id],
+    queryFn: () => fromSupabase(supabase.from('profiles').select('*').eq('id', id).single()),
 });
 
-export const useAddEvent = () => {
+export const useAddProfile = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (newEvent) => fromSupabase(supabase.from('event').insert([newEvent])),
+        mutationFn: (newProfile) => fromSupabase(supabase.from('profiles').insert([newProfile])),
         onSuccess: () => {
-            queryClient.invalidateQueries('events');
+            queryClient.invalidateQueries('profiles');
         },
     });
 };
 
-export const useUpdateEvent = () => {
+export const useUpdateProfile = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (updatedEvent) => fromSupabase(supabase.from('event').update(updatedEvent).eq('id', updatedEvent.id)),
+        mutationFn: (updatedProfile) => fromSupabase(supabase.from('profiles').upsert(updatedProfile)),
         onSuccess: () => {
-            queryClient.invalidateQueries('events');
-            queryClient.invalidateQueries(['event', updatedEvent.id]);
+            queryClient.invalidateQueries('profiles');
         },
     });
 };
 
-export const useDeleteEvent = () => {
+export const useDeleteProfile = () => {
     const queryClient = useQueryClient();
     return useMutation({
-        mutationFn: (id) => fromSupabase(supabase.from('event').delete().eq('id', id)),
+        mutationFn: (id) => fromSupabase(supabase.from('profiles').delete().eq('id', id)),
         onSuccess: () => {
-            queryClient.invalidateQueries('events');
+            queryClient.invalidateQueries('profiles');
         },
     });
 };
