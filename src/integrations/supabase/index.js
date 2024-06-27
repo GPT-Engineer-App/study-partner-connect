@@ -36,6 +36,7 @@ const fromSupabase = async (query) => {
 | profilePicture                | text        | string | false    |
 | studyInterests                | text        | string | false    |
 | preferredStudyTimes           | text        | string | false    |
+| hobbies                       | text        | string | false    |
 
 */
 
