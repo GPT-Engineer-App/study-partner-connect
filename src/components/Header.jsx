@@ -17,7 +17,7 @@ export const Header = () => {
       <nav className="flex items-center space-x-4">
         <a href="/" className="hover:underline">Home</a>
         <a href="/search" className="hover:underline">Search</a>
-        <a href="/profile-settings" className="hover:underline">Profile</a>
+        <a href="/edit-profile" className="hover:underline">Profile</a>
         <a href="/settings" className="hover:underline">Settings</a>
         <a href="/bio" className="hover:underline">Bio</a>
         {session ? (
