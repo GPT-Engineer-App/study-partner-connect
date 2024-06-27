@@ -26,6 +26,10 @@ const Index = () => {
                 <li className="p-2 border rounded-full bg-orange-200">Profile 3</li>
               </ul>
             </div>
+            <div className="w-full mt-4">
+              <Button className="w-full bg-orange-500 text-white rounded-full px-6 py-2" href="/profile-settings">Edit Profile</Button>
+              <Button className="w-full bg-orange-500 text-white rounded-full px-6 py-2 mt-2" href="/bio">View Bio</Button>
+            </div>
           </CardContent>
         </Card>
       </main>
