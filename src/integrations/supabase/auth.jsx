@@ -69,5 +69,18 @@ export const SupabaseAuthUI = () => (
     appearance={{ theme: ThemeSupa }}
     theme="default"
     providers={[]}
+    localization={{
+      variables: {
+        sign_in: {
+          email_label: 'Email address',
+          password_label: 'Create a Password',
+          button_label: 'Sign up',
+          link_text: 'Already have an account? Sign in',
+          email_input_placeholder: 'Your email address',
+          password_input_placeholder: 'Your password',
+          email_rate_limit_exceeded: 'Email rate limit exceeded. Please try again later.',
+        },
+      },
+    }}
   />
 );
