@@ -18,6 +18,7 @@ const EditProfile = () => {
     location: "",
     lookingFor: "",
     hobbies: "",
+    bio: "", // Add bio field
     rules: {
       smoking: false,
       flirting: false,
@@ -135,6 +136,16 @@ const EditProfile = () => {
                   id="hobbies"
                   name="hobbies"
                   value={profile.hobbies}
+                  onChange={handleChange}
+                  className="w-full bg-orange-100 rounded-3xl"
+                />
+              </div>
+              <div>
+                <Label htmlFor="bio">Bio</Label>
+                <Textarea
+                  id="bio"
+                  name="bio"
+                  value={profile.bio}
                   onChange={handleChange}
                   className="w-full bg-orange-100 rounded-3xl"
                 />
