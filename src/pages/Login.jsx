@@ -16,11 +16,11 @@ const Login = () => {
   }, [session, navigate]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-yellow-50">
       <main className="flex-grow flex flex-col items-center justify-center p-4">
-        <Card className="w-full max-w-md bg-orange-100">
-          <CardHeader>
-            <CardTitle className="text-center text-2xl text-orange-600">Sign In / Sign Up</CardTitle>
+        <Card className="w-full max-w-md bg-orange-100 rounded-3xl shadow-lg">
+          <CardHeader className="text-center">
+            <CardTitle className="text-3xl text-orange-600">Sign In / Sign Up</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-col items-center">
             <SupabaseAuthUI />
