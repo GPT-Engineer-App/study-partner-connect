@@ -49,7 +49,7 @@ const Bio = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-yellow-50">
+    <div className="flex flex-col min-h-screen bg-blue-50">
       <main className="flex-grow flex flex-col items-center justify-center p-4">
         <Card className="w-full max-w-md bg-orange-100 rounded-3xl shadow-lg">
           <CardHeader className="text-center">
