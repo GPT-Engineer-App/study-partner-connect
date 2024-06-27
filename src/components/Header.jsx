@@ -19,6 +19,7 @@ export const Header = () => {
         <a href="/search" className="hover:underline">Search</a>
         <a href="/profile-settings" className="hover:underline">Profile</a>
         <a href="/settings" className="hover:underline">Settings</a>
+        <a href="/bio" className="hover:underline">Bio</a>
         {session ? (
           <Button variant="outline" onClick={logout}>Sign Out</Button>
         ) : (
