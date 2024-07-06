@@ -207,6 +207,7 @@ const EditProfile = () => {
               </div>
               <Button type="submit" className="w-full bg-orange-500 text-white rounded-full px-6 py-2">Save</Button>
             </form>
+            <Button onClick={() => navigate("/bio")} className="mt-4 bg-orange-500 text-white rounded-full px-6 py-2">View Bio</Button>
           </CardContent>
         </Card>
       </main>

@@ -71,6 +71,7 @@ const Bio = () => {
                 {profile.rules.askingForMuchPersonalDetails && <li className="p-2 border rounded-full bg-orange-200">Asking For Much Personal Details</li>}
               </ul>
             </div>
+            <Button onClick={() => navigate("/edit-profile")} className="mt-4 bg-orange-500 text-white rounded-full px-6 py-2">Edit Profile</Button>
           </CardContent>
         </Card>
       </main>
