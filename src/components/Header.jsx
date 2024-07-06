@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { useSupabaseAuth } from "@/integrations/supabase/auth.jsx";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -15,11 +16,11 @@ export const Header = () => {
         <span className="text-xl font-bold">StudyBuddy</span>
       </div>
       <nav className="flex items-center space-x-4">
-        <a href="/" className="hover:underline">Home</a>
-        <a href="/search" className="hover:underline">Search</a>
-        <a href="/edit-profile" className="hover:underline">Profile</a>
-        <a href="/settings" className="hover:underline">Settings</a>
-        <a href="/bio" className="hover:underline">Bio</a>
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/search" className="hover:underline">Search</Link>
+        <Link to="/edit-profile" className="hover:underline">Profile</Link>
+        <Link to="/settings" className="hover:underline">Settings</Link>
+        <Link to="/bio" className="hover:underline">Bio</Link>
         {session ? (
           <Button variant="outline" onClick={logout}>Sign Out</Button>
         ) : (
